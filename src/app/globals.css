@@ -20,6 +20,11 @@
   --muted: var(--gray-500);
   --border: var(--gray-700);
   --card: var(--gray-900);
+
+  /* Accent — warm amber/orange */
+  --accent:        #e8870a;
+  --accent-light:  #f5a93a;
+  --accent-dim:    rgba(232, 135, 10, 0.12);
 }
 
 @theme inline {
@@ -113,11 +118,32 @@ a, button, [role="button"] {
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
 }
 
 /* Text selection */
 ::selection {
   background: var(--white);
   color: var(--black);
+}
+
+/* Impact metrics grid */
+.impact-grid {
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 768px) {
+  .impact-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* About section side-by-side layout */
+@media (min-width: 768px) {
+  .about-grid {
+    flex-direction: row !important;
+    align-items: flex-start;
+  }
+  .about-grid > *:last-child {
+    max-width: 340px !important;
+  }
 }

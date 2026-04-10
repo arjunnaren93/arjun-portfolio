@@ -73,9 +73,9 @@ export default function SkillsSection() {
                       transition: "background 0.2s, color 0.2s, border-color 0.2s",
                     }}
                     whileHover={{
-                      backgroundColor: "var(--white)",
-                      color: "var(--black)",
-                      borderColor: "var(--white)",
+                      backgroundColor: "var(--accent-dim)",
+                      color: "var(--accent-light)",
+                      borderColor: "var(--accent)",
                     }}
                   >
                     {skill.name}

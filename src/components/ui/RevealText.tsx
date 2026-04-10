@@ -52,7 +52,7 @@ export default function RevealText({
         style={{ display: "flex", flexWrap: "wrap", gap: "0.25em" }}
       >
         {words.map((w, i) => (
-          <span key={i} style={{ overflow: "hidden", display: "inline-block" }}>
+          <span key={i} style={{ overflow: "hidden", display: "inline-block", paddingBottom: "0.12em", marginBottom: "-0.12em" }}>
             <motion.span variants={word} style={{ display: "inline-block" }}>
               {w}
             </motion.span>

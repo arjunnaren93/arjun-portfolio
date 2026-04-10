@@ -47,9 +47,9 @@ export default function ContactSection() {
           duration={0.8}
           style={{
             fontFamily: "var(--font-playfair)",
-            fontSize: "clamp(2.5rem, 8vw, 6rem)",
+            fontSize: "clamp(2rem, 6vw, 5.5rem)",
             fontWeight: 400,
-            lineHeight: 1.1,
+            lineHeight: 1.15,
             color: "var(--white)",
             marginBottom: "3rem",
           } as React.CSSProperties}
@@ -77,8 +77,8 @@ export default function ContactSection() {
                 transition: "border-color 0.2s, color 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "var(--white)";
-                e.currentTarget.style.color = "var(--white)";
+                e.currentTarget.style.borderColor = "var(--accent)";
+                e.currentTarget.style.color = "var(--accent-light)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = "var(--gray-700)";

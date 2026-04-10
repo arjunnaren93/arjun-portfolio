@@ -3,35 +3,48 @@ import type { Job, Project, SkillCategory, Hobby } from "@/types";
 export const jobs: Job[] = [
   {
     company: "GoFundMe",
-    role: "Staff Data Analyst",
-    period: "2022 — Present",
-    location: "San Francisco, CA",
+    role: "Staff Analyst",
+    period: "Oct 2025 — Present",
+    location: "Seattle, WA",
     current: true,
     bullets: [
-      "Lead data strategy for fundraising product, driving insights across millions of campaigns.",
-      "Built end-to-end analytics pipelines in SQL and Python, reducing reporting lag by 60%.",
-      "Partnered with product and engineering to define north-star metrics and OKR frameworks.",
+      "Leading data analytics strategy across fundraising product — details coming soon.",
+      "[ Placeholder — add your GoFundMe highlights here ]",
     ],
   },
   {
-    company: "Previous Company",
-    role: "Senior Data Analyst",
-    period: "2019 — 2022",
-    location: "Remote",
+    company: "Rothy's",
+    role: "Sr. Manager, Data Analytics",
+    period: "Mar 2019 — Oct 2025",
+    location: "San Francisco, CA (Remote)",
     bullets: [
-      "Developed dashboards and reporting infrastructure serving 500+ stakeholders.",
-      "Designed A/B testing frameworks that informed key product decisions.",
-      "Mentored junior analysts and established team-wide best practices.",
+      "Spearheaded customer segmentation strategy, increasing conversion rates by 11%.",
+      "Reduced lifetime value degradation of discount customers by 20% through data-driven strategies.",
+      "Conducted a Lift test on Facebook campaigns, driving a 27% revenue increase for the Lapsed group.",
+      "Implemented an Airflow pipeline integrating Google Sheets and AWS S3 into Redshift, visualized in Looker.",
+      "Automated NPS feedback categorization with Python and OpenAI API, enhancing analysis efficiency.",
     ],
   },
   {
-    company: "Early Career",
-    role: "Data Analyst",
-    period: "2017 — 2019",
-    location: "New York, NY",
+    company: "Art.com",
+    role: "Sr. Marketing Data Analyst",
+    period: "09/2017 — 03/2019",
+    location: "San Francisco, CA",
     bullets: [
-      "Built predictive models to identify high-value customer segments.",
-      "Automated recurring reports saving 10+ hours of manual work per week.",
+      "Increased landing page conversion rates by 18% through targeted optimizations.",
+      "Developed Tableau dashboards, streamlining channel performance tracking.",
+      "Enhanced forecasting accuracy via time series analysis.",
+    ],
+  },
+  {
+    company: "Fuelx",
+    role: "Data Analyst, Business Operations",
+    period: "10/2016 — 09/2017",
+    location: "San Francisco, CA",
+    bullets: [
+      "Improved client retention rates from 73% to 88% through cohort analysis.",
+      "Managed CPA-based campaigns, overseeing 2/3rds of company revenue.",
+      "Delivered actionable insights via Tableau dashboards, optimizing campaign performance.",
     ],
   },
 ];
@@ -39,31 +52,31 @@ export const jobs: Job[] = [
 export const projects: Project[] = [
   {
     number: "01",
-    title: "Campaign Performance Dashboard",
+    title: "Customer Segmentation Engine",
     description:
-      "Real-time analytics dashboard tracking fundraising campaign health across multiple dimensions. Built with Looker and custom SQL models.",
-    tags: ["SQL", "Looker", "Python", "BigQuery"],
+      "Built a full segmentation strategy at Rothy's that identified high-value customer cohorts and drove an 11% lift in conversion rates across targeted campaigns.",
+    tags: ["Python", "SQL", "Redshift", "Looker"],
   },
   {
     number: "02",
-    title: "Donor Lifetime Value Model",
+    title: "Facebook Lift Test Framework",
     description:
-      "Machine learning model predicting donor LTV to guide re-engagement campaigns. Increased targeted email revenue by 23%.",
-    tags: ["Python", "scikit-learn", "BigQuery", "Airflow"],
+      "Designed and executed a Lift test on Facebook campaigns for the Lapsed customer group, resulting in a 27% revenue increase through optimized audience targeting.",
+    tags: ["A/B Testing", "Facebook Ads", "Python", "Statistics"],
   },
   {
     number: "03",
-    title: "A/B Testing Framework",
+    title: "NPS Feedback Categorization",
     description:
-      "Internal tooling for running statistically rigorous experiments across product features. Used by 15+ product and engineering teams.",
-    tags: ["Python", "Statistics", "SQL", "Notion"],
+      "Automated open-text NPS feedback classification using Python and the OpenAI API, eliminating manual tagging and unlocking faster product feedback loops.",
+    tags: ["Python", "OpenAI API", "NLP", "Automation"],
   },
   {
     number: "04",
-    title: "Data Quality Monitor",
+    title: "Airflow Data Pipeline",
     description:
-      "Automated pipeline health checks and data quality scoring system that reduced data incidents by 40%.",
-    tags: ["Python", "dbt", "Airflow", "Slack API"],
+      "Implemented a robust Airflow pipeline integrating Google Sheets and AWS S3 into Redshift, with a Looker layer for stakeholder reporting.",
+    tags: ["Airflow", "AWS S3", "Redshift", "Looker", "Python"],
   },
 ];
 
@@ -71,78 +84,76 @@ export const skillCategories: SkillCategory[] = [
   {
     label: "Languages & Tools",
     skills: [
-      { name: "SQL" },
       { name: "Python" },
-      { name: "dbt" },
+      { name: "SQL" },
       { name: "Airflow" },
-      { name: "BigQuery" },
-      { name: "Snowflake" },
-      { name: "Spark" },
+      { name: "Docker" },
       { name: "Git" },
+      { name: "Microsoft Excel" },
     ],
   },
   {
-    label: "Visualization",
+    label: "Platforms & Data",
+    skills: [
+      { name: "AWS Redshift" },
+      { name: "AWS S3" },
+      { name: "Google Data Studio" },
+      { name: "Amplitude" },
+      { name: "Optimizely" },
+      { name: "ECommerce" },
+    ],
+  },
+  {
+    label: "Visualization & Methods",
     skills: [
       { name: "Looker" },
       { name: "Tableau" },
-      { name: "Hex" },
-      { name: "Metabase" },
-      { name: "Matplotlib" },
-      { name: "Plotly" },
-    ],
-  },
-  {
-    label: "Platforms & Methods",
-    skills: [
       { name: "A/B Testing" },
-      { name: "Machine Learning" },
-      { name: "Product Analytics" },
-      { name: "Data Modeling" },
-      { name: "GCP" },
-      { name: "AWS" },
+      { name: "Customer Segmentation" },
+      { name: "Time Series" },
+      { name: "Data Mining" },
     ],
   },
 ];
 
 export const hobbies: Hobby[] = [
   {
+    title: "Hiking & Outdoors",
+    description:
+      "Based in Seattle — the mountains are right there. Hiking clears my head the same way a good query does: one step at a time until the answer reveals itself.",
+  },
+  {
     title: "Photography",
     description:
-      "Street photography and portraits. There's something about freezing a moment that parallels what I do with data — finding signal in the chaos.",
+      "Street photography and portraits. Finding signal in visual noise isn't too different from finding it in data.",
   },
   {
-    title: "Running",
+    title: "Building Side Projects",
     description:
-      "Half-marathon enthusiast. The long runs are where I do my best thinking — structured problems, open mind.",
-  },
-  {
-    title: "Side Projects",
-    description:
-      "Building small tools that scratch my own itches. Currently experimenting with LLM-powered data exploration.",
+      "Currently experimenting with LLM-powered data exploration tools. If I can make analytics more accessible, that's a win.",
   },
   {
     title: "Reading",
     description:
-      "Non-fiction heavy — behavioural economics, systems thinking, and the occasional sci-fi to keep the imagination sharp.",
+      "Behavioural economics, systems thinking, and sci-fi. Kahneman, Taleb, and whatever keeps the curiosity sharp.",
   },
 ];
 
 export const marqueeItems = [
-  "DATA ANALYSIS",
+  "DATA ANALYTICS",
   "PYTHON",
   "SQL",
-  "VISUALIZATION",
-  "STORYTELLING",
-  "IMPACT",
-  "MACHINE LEARNING",
-  "PRODUCT",
+  "CUSTOMER SEGMENTATION",
   "A/B TESTING",
-  "GOFUNDME",
+  "LOOKER",
+  "AIRFLOW",
+  "E-COMMERCE",
+  "MACHINE LEARNING",
+  "STORYTELLING",
 ];
 
 export const contact = {
-  email: "arjun@example.com",
-  linkedin: "https://linkedin.com/in/arjunnarendran",
+  email: "arjun.naren93@gmail.com",
+  linkedin: "https://linkedin.com/in/arjun-narendran",
   github: "https://github.com/arjunnaren93",
 };

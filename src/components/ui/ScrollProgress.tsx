@@ -22,7 +22,7 @@ export default function ScrollProgress() {
         style={{
           height: "100%",
           width: `${progress * 100}%`,
-          background: "var(--white)",
+          background: "var(--accent)",
           transition: "width 0.1s linear",
         }}
       />

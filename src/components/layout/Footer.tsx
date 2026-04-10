@@ -44,7 +44,7 @@ export default function Footer() {
               textDecoration: "none",
               transition: "color 0.2s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--white)")}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-light)")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "var(--gray-500)")}
           >
             {link.label}

@@ -82,11 +82,11 @@ export default function ExperienceSection() {
                         display: "inline-block",
                         marginTop: "0.5rem",
                         padding: "0.2rem 0.5rem",
-                        border: "1px solid var(--gray-600)",
+                        border: "1px solid var(--accent)",
                         fontFamily: "var(--font-geist-mono)",
                         fontSize: "0.6rem",
                         letterSpacing: "0.1em",
-                        color: "var(--gray-400)",
+                        color: "var(--accent)",
                         width: "fit-content",
                       }}
                     >
@@ -102,7 +102,7 @@ export default function ExperienceSection() {
                       fontFamily: "var(--font-playfair)",
                       fontSize: "clamp(1.5rem, 3vw, 2rem)",
                       fontWeight: 400,
-                      color: "var(--white)",
+                      color: job.current ? "var(--accent-light)" : "var(--white)",
                       marginBottom: "0.25rem",
                     }}
                   >

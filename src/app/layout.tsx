@@ -27,11 +27,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arjun Narendran — Staff Data Analyst",
+  title: "Arjun Narendran — Sr. Manager, Data Analytics",
   description:
-    "Portfolio of Arjun Narendran, Staff Data Analyst at GoFundMe. Turning data into decisions.",
+    "Portfolio of Arjun Narendran, Sr. Manager of Data Analytics with 8+ years driving e-commerce growth. Turning data into decisions.",
   openGraph: {
-    title: "Arjun Narendran — Staff Data Analyst",
+    title: "Arjun Narendran — Sr. Manager, Data Analytics",
     description: "Turning data into decisions.",
     type: "website",
   },
