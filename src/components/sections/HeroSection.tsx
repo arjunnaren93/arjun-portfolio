@@ -18,6 +18,7 @@ export default function HeroSection() {
         height: "100svh",
         overflow: "hidden",
         background: "#000",
+        isolation: "isolate",
       }}
     >
       {/* Background photo — Unsplash aerial city */}
@@ -27,6 +28,9 @@ export default function HeroSection() {
           inset: "-10% 0",
           y: imgY,
           willChange: "transform",
+          backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden",
+          outline: "1px solid transparent",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -40,6 +44,7 @@ export default function HeroSection() {
             objectFit: "cover",
             objectPosition: "center 40%",
             filter: "grayscale(0.15) contrast(1.05) brightness(0.55) saturate(0.75)",
+            display: "block",
           }}
         />
       </motion.div>
