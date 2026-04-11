@@ -18,7 +18,6 @@ export default function HeroSection() {
         height: "100svh",
         overflow: "hidden",
         background: "#000",
-        isolation: "isolate",
       }}
     >
       {/* Background photo — Unsplash aerial city */}
@@ -28,9 +27,7 @@ export default function HeroSection() {
           inset: "-10% 0",
           y: imgY,
           willChange: "transform",
-          backfaceVisibility: "hidden",
-          WebkitBackfaceVisibility: "hidden",
-          outline: "1px solid transparent",
+          transform: "translateZ(0)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
