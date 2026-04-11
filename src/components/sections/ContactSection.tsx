@@ -24,7 +24,7 @@ export default function ContactSection() {
     <section
       id="contact"
       style={{
-        padding: "10rem 0 8rem",
+        padding: "6rem 0 5rem",
         borderTop: "1px solid var(--gray-800)",
         position: "relative",
       }}
@@ -32,7 +32,7 @@ export default function ContactSection() {
       <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
         <motion.p
           className="section-label"
-          style={{ marginBottom: "3rem" }}
+          style={{ marginBottom: "2rem" }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

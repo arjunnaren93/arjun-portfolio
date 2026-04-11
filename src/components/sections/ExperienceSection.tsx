@@ -7,12 +7,12 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      style={{ padding: "8rem 0", borderTop: "1px solid var(--gray-800)" }}
+      style={{ padding: "6rem 0", borderTop: "1px solid var(--gray-800)" }}
     >
       <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
         <motion.p
           className="section-label"
-          style={{ marginBottom: "4rem" }}
+          style={{ marginBottom: "3rem" }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -49,7 +49,7 @@ export default function ExperienceSection() {
                   display: "grid",
                   gridTemplateColumns: "1fr",
                   gap: "1.5rem",
-                  padding: "3rem 0",
+                  padding: "2.25rem 0",
                   borderBottom: "1px solid var(--gray-800)",
                 }}
                 className="md:grid-cols-[200px_1fr] md:pl-8"

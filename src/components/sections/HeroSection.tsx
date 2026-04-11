@@ -250,31 +250,39 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator — chevron, works on all screen sizes */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
         style={{
           position: "absolute",
-          bottom: "2rem",
+          bottom: "1.75rem",
           left: "50%",
           transform: "translateX(-50%)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "0.5rem",
+          gap: "0",
         }}
       >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          style={{
-            width: "1px",
-            height: "36px",
-            background: "linear-gradient(to bottom, rgba(255,255,255,0.5), transparent)",
-          }}
-        />
+        <motion.svg
+          animate={{ y: [0, 5, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          style={{ opacity: 0.5 }}
+        >
+          <path
+            d="M4 7l6 6 6-6"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </motion.svg>
       </motion.div>
     </section>
   );

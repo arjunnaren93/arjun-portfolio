@@ -13,18 +13,18 @@ export default function AboutSection() {
   const marquee = [...marqueeItems, ...marqueeItems];
 
   return (
-    <section id="about" style={{ paddingTop: "8rem" }}>
+    <section id="about" style={{ paddingTop: "6rem" }}>
       <div
         style={{
           maxWidth: "80rem",
           margin: "0 auto",
-          padding: "0 1.5rem 6rem",
+          padding: "0 1.5rem 4rem",
         }}
       >
         {/* Label */}
         <motion.p
           className="section-label"
-          style={{ marginBottom: "4rem" }}
+          style={{ marginBottom: "3rem" }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -37,7 +37,7 @@ export default function AboutSection() {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "4rem",
+            gap: "3rem",
           }}
           className="about-grid"
         >

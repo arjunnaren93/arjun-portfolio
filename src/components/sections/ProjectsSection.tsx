@@ -3,18 +3,11 @@
 import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
 
-const impacts = [
-  { value: "27%", label: "Revenue growth", sub: "Facebook lift test" },
-  { value: "11%", label: "Conversion lift", sub: "Customer segmentation" },
-  { value: "20%", label: "LTV improved", sub: "Discount optimisation" },
-  { value: "18%", label: "Landing page CVR", sub: "A/B testing at Art.com" },
-];
-
 export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      style={{ padding: "8rem 0 0", borderTop: "1px solid var(--gray-800)" }}
+      style={{ padding: "6rem 0", borderTop: "1px solid var(--gray-800)" }}
     >
       <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
         <motion.p
@@ -130,75 +123,6 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Impact metrics strip */}
-      <div
-        style={{
-          marginTop: "5rem",
-          borderTop: "1px solid var(--gray-800)",
-          background: "var(--gray-900)",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "80rem",
-            margin: "0 auto",
-            padding: "4rem 1.5rem",
-            display: "grid",
-            gap: "0",
-          }}
-          className="impact-grid"
-        >
-          {impacts.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
-              style={{
-                padding: "2rem",
-                borderRight: i < impacts.length - 1 ? "1px solid var(--gray-800)" : "none",
-                textAlign: "center",
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "var(--font-playfair)",
-                  fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
-                  fontWeight: 400,
-                  color: "var(--accent-light)",
-                  lineHeight: 1,
-                  marginBottom: "0.5rem",
-                }}
-              >
-                {item.value}
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-geist)",
-                  fontSize: "0.85rem",
-                  color: "var(--gray-300)",
-                  marginBottom: "0.25rem",
-                }}
-              >
-                {item.label}
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-geist-mono)",
-                  fontSize: "0.62rem",
-                  letterSpacing: "0.1em",
-                  color: "var(--gray-600)",
-                  textTransform: "uppercase",
-                }}
-              >
-                {item.sub}
               </div>
             </motion.div>
           ))}

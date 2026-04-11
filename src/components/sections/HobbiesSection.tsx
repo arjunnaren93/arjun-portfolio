@@ -7,7 +7,7 @@ export default function HobbiesSection() {
   return (
     <section
       id="hobbies"
-      style={{ padding: "8rem 0", borderTop: "1px solid var(--gray-800)" }}
+      style={{ padding: "6rem 0", borderTop: "1px solid var(--gray-800)" }}
     >
       <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
         <motion.p
@@ -30,7 +30,7 @@ export default function HobbiesSection() {
             fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
             fontWeight: 400,
             color: "var(--white)",
-            marginBottom: "4rem",
+            marginBottom: "3rem",
           }}
         >
           Outside the data.

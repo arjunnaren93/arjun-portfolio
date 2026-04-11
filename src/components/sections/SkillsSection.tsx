@@ -17,12 +17,12 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      style={{ padding: "8rem 0", borderTop: "1px solid var(--gray-800)" }}
+      style={{ padding: "6rem 0", borderTop: "1px solid var(--gray-800)" }}
     >
       <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
         <motion.p
           className="section-label"
-          style={{ marginBottom: "4rem" }}
+          style={{ marginBottom: "3rem" }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
