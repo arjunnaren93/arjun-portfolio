@@ -1,11 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
-// Note: hero image uses pure CSS animation to avoid GPU compositing flicker
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function HeroSection() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+
   return (
     <section
+      ref={ref}
       id="hero"
       style={{
         position: "relative",
@@ -14,25 +19,30 @@ export default function HeroSection() {
         background: "#000",
       }}
     >
-      {/* Background photo — Ken Burns via pure CSS, no JS animation layer */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1920&q=85&auto=format"
-        alt=""
-        aria-hidden="true"
-        className="hero-img"
+      {/* Background photo with parallax */}
+      <motion.div
         style={{
           position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center 40%",
-          filter: "grayscale(0.15) contrast(1.05) brightness(0.55) saturate(0.75)",
-          display: "block",
-          transformOrigin: "center center",
+          inset: "-12% 0",
+          y: imgY,
         }}
-      />
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1920&q=85&auto=format"
+          alt=""
+          aria-hidden="true"
+          className="hero-img"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center 40%",
+            filter: "grayscale(0.15) contrast(1.05) brightness(0.55) saturate(0.75)",
+            display: "block",
+          }}
+        />
+      </motion.div>
 
       {/* Multi-layer gradient */}
       <div
