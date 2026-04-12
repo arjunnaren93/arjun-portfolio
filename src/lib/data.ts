@@ -160,10 +160,10 @@ export const testimonials: Testimonial[] = [
     name: "Emmanuel Rain",
     role: "Head of Operations & Finance",
     company: "Amara",
-    relationship: "Direct manager",
+    relationship: "Direct manager at art.com",
     date: "March 2019",
     linkedin: "https://www.linkedin.com/in/emmanuel-rain-23275b8/",
-    text: "I had the chance to manage Arjun while he was Marketing Analytics Manager at Amara. Arjun is a brilliant individual who combines a strong technical knowledge and a very sharp business acumen. He is not only pulling and analyzing data, but comes up with ideas to implement and solutions to problems. His work ethic and enthusiasm at work makes him a pleasure to work with. He started reporting to me at a time where there was some turnover in the team and he was able to adapt very quickly and step up to take more responsibilities and became in a short amount of time the go-to person for everything related to business analytics. I am looking forward to see him grow in his career and hope that I will have the opportunity to work with him again at some point in the future!",
+    text: "I had the chance to manage Arjun while he was a Marketing Analyst at art.com. Arjun is a brilliant individual who combines a strong technical knowledge and a very sharp business acumen. He is not only pulling and analyzing data, but comes up with ideas to implement and solutions to problems. His work ethic and enthusiasm at work makes him a pleasure to work with. He started reporting to me at a time where there was some turnover in the team and he was able to adapt very quickly and step up to take more responsibilities and become in a matter of weeks my go to person for everything related to business analytics. I am looking forward to see him grow in his career and hope that I will have the opportunity to work with him again at some point in the future!",
   },
 ];
 
