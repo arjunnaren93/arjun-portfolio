@@ -30,3 +30,13 @@ export interface Hobby {
   description: string;
   emoji?: string;
 }
+
+export interface Testimonial {
+  name: string;
+  role: string;
+  company: string;
+  relationship: string;
+  date: string;
+  text: string;
+  linkedin?: string;
+}
