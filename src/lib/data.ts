@@ -12,7 +12,7 @@ export const jobs: Job[] = [
       "Designed and delivered the Share Attribution methodology that engineering had been unable to solve for nearly a year — analysed the data end-to-end and defined an optimal model to attribute an organizer's share action to a supporter's subsequent visit, enabling accurate downstream measurement.",
       "Build performance dashboards to track new product feature launches, giving PMs and engineers a real-time read on whether changes are moving the right metrics; primary analytics partner for experiment readouts run by data scientists.",
       "Championed AI-assisted analytics across the team — authored internal guides for Claude Code and MCP tooling, and drove adoption so the full analytics team now uses AI in their day-to-day workflows.",
-      "Conducted a Share Rate deep dive identifying head campaigns as the driver of a Week 5 spike and flagging a structural decline trend since Aug 2025 — findings directly shaped roadmap prioritisation.",
+      "Conducted a Share Rate deep dive that identified the root cause of an anomalous spike and flagged a structural decline trend — findings directly shaped roadmap prioritisation.",
     ],
   },
   {

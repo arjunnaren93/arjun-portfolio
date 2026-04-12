@@ -189,7 +189,7 @@ export default function HeroSection() {
               maxWidth: "420px",
             }}
           >
-            I own the metrics that matter — from product funnels to experiment readouts — and turn them into decisions that move the needle.
+            Eight years of analytics. One constant: data doesn't mean anything until someone acts on it. I own the consumer metrics, design the measurement, and make sure the findings don't die in a dashboard — they move the roadmap.
           </motion.p>
 
           <motion.div
