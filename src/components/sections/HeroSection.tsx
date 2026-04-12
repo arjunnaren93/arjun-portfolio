@@ -189,7 +189,7 @@ export default function HeroSection() {
               maxWidth: "420px",
             }}
           >
-            Eight years of analytics. One constant: data doesn't mean anything until someone acts on it. I own the consumer metrics, design the measurement, and make sure the findings don't die in a dashboard — they move the roadmap.
+            Eight years of analytics. One constant: data doesn&apos;t mean anything until someone acts on it. I own the consumer metrics, design the measurement, and make sure the findings don&apos;t die in a dashboard — they move the roadmap.
           </motion.p>
 
           <motion.div
