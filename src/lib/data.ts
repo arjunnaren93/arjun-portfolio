@@ -131,14 +131,14 @@ export const hobbies: Hobby[] = [
       "Street photography and portraits. Finding signal in visual noise isn't too different from finding it in data.",
   },
   {
-    title: "Building Side Projects",
+    title: "Football",
     description:
-      "Currently experimenting with LLM-powered data exploration tools. If I can make analytics more accessible, that's a win.",
+      "Real Madrid fan, no apologies. FIFA is a weekly ritual. There's something about the data behind the beautiful game — possession stats, pressing maps — that feels a lot like work, but better.",
   },
   {
-    title: "Reading",
+    title: "Gaming & Film",
     description:
-      "Behavioural economics, systems thinking, and sci-fi. Kahneman, Taleb, and whatever keeps the curiosity sharp.",
+      "Waiting on Arc Raiders. Finished Red Dead Redemption. FIFA is a religion. On screen: Ex Machina, The Creator, and anything sci-fi or thriller that makes you think after the credits roll.",
   },
 ];
 
