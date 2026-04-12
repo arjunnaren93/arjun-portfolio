@@ -72,10 +72,10 @@ export default function AboutSection() {
                   color: "var(--gray-300)",
                 }}
               >
-                Data Analytics leader with 8+ years of experience driving e-commerce growth
-                through actionable insights, customer segmentation, and data-driven strategy.
-                Currently at GoFundMe, previously building analytics foundations at Rothy&apos;s,
-                Art.com, and Fuelx.
+                Data analytics leader with 8+ years of experience turning complex data into
+                decisions that drive real business outcomes. Currently at GoFundMe, where I own
+                analytics for the consumer fundraising experience — helping millions of people
+                raise money more effectively.
               </p>
               <p
                 style={{

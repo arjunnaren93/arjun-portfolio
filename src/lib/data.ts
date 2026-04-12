@@ -3,13 +3,16 @@ import type { Job, Project, SkillCategory, Hobby } from "@/types";
 export const jobs: Job[] = [
   {
     company: "GoFundMe",
-    role: "Staff Analyst",
+    role: "Staff Analyst, Consumer Analytics",
     period: "Oct 2025 — Present",
     location: "Seattle, WA",
     current: true,
     bullets: [
-      "Leading data analytics strategy across fundraising product — details coming soon.",
-      "[ Placeholder — add your GoFundMe highlights here ]",
+      "Own end-to-end analytics for the Organizer, Amplify, and Giving (Fundraiser Page) funnels — tracking how millions of fundraisers are created, shared, and funded.",
+      "Built a Share Attribution model at date and timestamp level with full documentation and tradeoff analysis, enabling precise measurement of donation influence across channels.",
+      "Led Manage Revamp analytics: delivered a rebuilt dashboard with metric fixes, new filters, MySQL → mParticle data migration, and Supporter Tab rebuilt in Hex.",
+      "Shipped a recurring donations monitoring dashboard in partnership with data engineering, fixing broken logic and establishing ongoing data quality tracking.",
+      "Conducted /manage page impact analysis that identified supporters hitting 4xx errors — findings delivered directly to engineering to unblock affected users.",
     ],
   },
   {
