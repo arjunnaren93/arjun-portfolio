@@ -1,17 +1,10 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
-
   return (
     <section
-      ref={ref}
       id="hero"
       style={{
         position: "relative",
@@ -20,33 +13,27 @@ export default function HeroSection() {
         background: "#000",
       }}
     >
-      {/* Background photo — Unsplash aerial city */}
-      <motion.div
+      {/* Background photo — Ken Burns zoom, no parallax (parallax causes GPU flicker) */}
+      <motion.img
+        src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1920&q=85&auto=format"
+        alt=""
+        aria-hidden="true"
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.06 }}
+        transition={{ duration: 20, ease: "linear" }}
         style={{
           position: "absolute",
-          inset: "-10% 0",
-          y: imgY,
-          willChange: "transform",
-          transform: "translateZ(0)",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center 40%",
+          filter: "grayscale(0.15) contrast(1.05) brightness(0.55) saturate(0.75)",
+          display: "block",
         }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1920&q=85&auto=format"
-          alt=""
-          aria-hidden="true"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center 40%",
-            filter: "grayscale(0.15) contrast(1.05) brightness(0.55) saturate(0.75)",
-            display: "block",
-          }}
-        />
-      </motion.div>
+      />
 
-      {/* Multi-layer gradient — heavy left + bottom so text always pops */}
+      {/* Multi-layer gradient */}
       <div
         aria-hidden="true"
         style={{
@@ -102,7 +89,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Main content */}
-      <motion.div
+      <div
         style={{
           position: "absolute",
           inset: 0,
@@ -114,7 +101,6 @@ export default function HeroSection() {
           margin: "0 auto",
           left: 0,
           right: 0,
-          y: textY,
         }}
       >
         {/* Eyebrow label */}
@@ -138,7 +124,7 @@ export default function HeroSection() {
           Staff Analyst · GoFundMe · Seattle
         </motion.p>
 
-        {/* Name — huge, white, no clipping */}
+        {/* Name */}
         <div style={{ overflow: "visible", marginBottom: "1.5rem" }}>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -180,7 +166,6 @@ export default function HeroSection() {
             gap: "1.5rem",
           }}
         >
-          {/* Tagline */}
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -196,7 +181,6 @@ export default function HeroSection() {
             Data analytics leader with 8+ years turning complex data into decisions that drive real growth.
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -250,9 +234,9 @@ export default function HeroSection() {
             </a>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
 
-      {/* Scroll indicator — chevron, works on all screen sizes */}
+      {/* Scroll indicator — bouncing chevron, works on all screen sizes */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -262,23 +246,19 @@ export default function HeroSection() {
           bottom: "1.75rem",
           left: "50%",
           transform: "translateX(-50%)",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "0",
         }}
       >
         <motion.svg
-          animate={{ y: [0, 5, 0] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
           fill="none"
-          style={{ opacity: 0.5 }}
+          style={{ opacity: 0.5, display: "block" }}
         >
           <path
-            d="M4 7l6 6 6-6"
+            d="M5 9l7 7 7-7"
             stroke="white"
             strokeWidth="1.5"
             strokeLinecap="round"
