@@ -189,7 +189,7 @@ export default function HeroSection() {
               maxWidth: "420px",
             }}
           >
-            Data analytics leader with 8+ years turning complex data into decisions that drive real growth.
+            I own the metrics that matter — from product funnels to experiment readouts — and turn them into decisions that move the needle.
           </motion.p>
 
           <motion.div

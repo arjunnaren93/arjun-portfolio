@@ -72,10 +72,10 @@ export default function AboutSection() {
                   color: "var(--gray-300)",
                 }}
               >
-                Data analytics leader with 8+ years of experience turning complex data into
-                decisions that drive real business outcomes. Currently at GoFundMe, where I own
-                analytics for the consumer fundraising experience — helping millions of people
-                raise money more effectively.
+                Data analytics leader with 8+ years of experience owning the metrics that
+                matter — from consumer product funnels to experiment readouts to executive
+                dashboards. Currently at GoFundMe, where my work helps millions of people
+                fundraise more effectively.
               </p>
               <p
                 style={{

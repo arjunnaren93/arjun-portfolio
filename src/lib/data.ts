@@ -8,11 +8,11 @@ export const jobs: Job[] = [
     location: "Seattle, WA",
     current: true,
     bullets: [
-      "Own end-to-end analytics for the Organizer, Amplify, and Giving (Fundraiser Page) funnels — tracking how millions of fundraisers are created, shared, and funded.",
-      "Built a Share Attribution model at date and timestamp level with full documentation and tradeoff analysis, enabling precise measurement of donation influence across channels.",
-      "Led Manage Revamp analytics: delivered a rebuilt dashboard with metric fixes, new filters, MySQL → mParticle data migration, and Supporter Tab rebuilt in Hex.",
-      "Shipped a recurring donations monitoring dashboard in partnership with data engineering, fixing broken logic and establishing ongoing data quality tracking.",
-      "Conducted /manage page impact analysis that identified supporters hitting 4xx errors — findings delivered directly to engineering to unblock affected users.",
+      "Own the data for GoFundMe's consumer experience — monitoring health metrics across the Organizer, Amplify, and Fundraiser Page funnels and proactively surfacing drops, anomalies, and opportunities to product and engineering.",
+      "Built performance dashboards to track new product feature launches end-to-end, giving teams a real-time read on whether changes are moving the right metrics.",
+      "Primary analytics partner for experiment readouts — helping data scientists and PMs interpret A/B test results and translate statistical findings into clear product recommendations.",
+      "Conducted a Share Rate deep dive that identified head campaigns as the driver of a spike in Week 5 share behaviour, and flagged a structural decline trend to guide roadmap prioritisation.",
+      "Rebuilt the Manage Revamp dashboard with new filters and a MySQL → mParticle data migration; shipped a Recurring Donations monitoring dashboard that resolved broken data logic with engineering.",
     ],
   },
   {
