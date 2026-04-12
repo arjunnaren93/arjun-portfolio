@@ -113,6 +113,15 @@ a, button, [role="button"] {
   50% { opacity: 0.4; transform: scaleX(0.5); }
 }
 
+/* Hero Ken Burns — pure CSS, no JS/Framer Motion, no compositing artifact */
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+.hero-img {
+  animation: kenburns 22s ease-in-out forwards;
+}
+
 /* Section label style */
 .section-label {
   font-family: var(--font-geist-mono), monospace;

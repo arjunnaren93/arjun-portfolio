@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+// Note: hero image uses pure CSS animation to avoid GPU compositing flicker
 
 export default function HeroSection() {
   return (
@@ -13,14 +14,13 @@ export default function HeroSection() {
         background: "#000",
       }}
     >
-      {/* Background photo — Ken Burns zoom, no parallax (parallax causes GPU flicker) */}
-      <motion.img
+      {/* Background photo — Ken Burns via pure CSS, no JS animation layer */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1920&q=85&auto=format"
         alt=""
         aria-hidden="true"
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.06 }}
-        transition={{ duration: 20, ease: "linear" }}
+        className="hero-img"
         style={{
           position: "absolute",
           inset: 0,
@@ -30,6 +30,7 @@ export default function HeroSection() {
           objectPosition: "center 40%",
           filter: "grayscale(0.15) contrast(1.05) brightness(0.55) saturate(0.75)",
           display: "block",
+          transformOrigin: "center center",
         }}
       />
 
