@@ -158,7 +158,7 @@ export const marqueeItems = [
 export const testimonials: Testimonial[] = [
   {
     name: "Emmanuel Rain",
-    role: "Marketing Analytics Manager",
+    role: "Head of Operations & Finance",
     company: "Amara",
     relationship: "Direct manager",
     date: "March 2019",
