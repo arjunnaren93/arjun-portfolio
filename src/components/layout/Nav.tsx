@@ -1,14 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Nav() {
@@ -51,8 +52,8 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <a
-          href="#"
+        <Link
+          href="/"
           style={{
             fontFamily: "var(--font-geist-mono)",
             fontSize: "0.75rem",
@@ -64,7 +65,7 @@ export default function Nav() {
           }}
         >
           AN
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div
