@@ -20,7 +20,10 @@ function printResume() {
           @page { margin: 0.55in 0.6in; size: letter; }
           body { margin: 0; padding: 0; background: white; }
           ${styles}
-          .resume-doc { box-shadow: none !important; max-width: 100% !important; }
+          .resume-doc { box-shadow: none !important; max-width: 100% !important; padding: 0 !important; }
+          .r-section { margin-bottom: 1.1rem !important; }
+          .r-job { margin-bottom: 1rem !important; }
+          .r-summary { line-height: 1.6 !important; }
           a { color: #333 !important; text-decoration: none !important; }
         </style>
       </head>
@@ -287,13 +290,14 @@ export default function ResumePage() {
           <section className="r-section">
             <h2 className="r-section-title">Summary</h2>
             <p className="r-summary">
-              Data analytics leader with 8+ years of experience translating complex data into
-              decisions that move the business — across consumer product, ecommerce, and marketing.
-              Currently at GoFundMe, owning funnel health for millions of fundraisers and designing
-              attribution methodology that had blocked engineering for nearly a year. Track record of
-              measurable impact: 27% revenue lift, 18% conversion improvement, client retention from
-              73% to 88%. Expert in SQL, Python, A/B testing, and building AI-augmented analytics
-              workflows that scale across teams.
+              Senior analytics leader who solves the measurement problems other analysts walk past.
+              At GoFundMe, designed the Share Attribution methodology that had blocked engineering
+              for nearly a year — defining the model end-to-end and enabling accurate downstream
+              experimentation across millions of fundraisers. Eight years of quantified impact at
+              consumer and ecommerce companies: 27% revenue lift, 18% conversion improvement,
+              15-point retention gain. Deep expertise in SQL, Python, A/B testing, and experiment
+              design; proven track record of building AI-augmented workflows that scale across
+              analytics teams.
             </p>
           </section>
 
@@ -311,11 +315,11 @@ export default function ResumePage() {
                 <span className="r-location">Seattle, WA</span>
               </div>
               <ul className="r-bullets">
-                <li>Own the data for GoFundMe&apos;s consumer experience — continuously monitoring health metrics across the Organizer, Amplify, and Fundraiser Page funnels and proactively surfacing drops, anomalies, and opportunities to product and engineering.</li>
-                <li>Designed and delivered the Share Attribution methodology that engineering had been unable to solve for nearly a year — analysed the data end-to-end and defined the optimal model attributing organizer share actions to supporter visits, enabling accurate downstream measurement.</li>
-                <li>Primary analytics partner for experiment readouts; build launch dashboards giving PMs and engineers real-time signal on whether product changes move the right metrics.</li>
-                <li>Championed AI-assisted analytics across the team — authored internal guides for Claude Code and MCP tooling, driving adoption so the full analytics team uses AI in day-to-day workflows.</li>
-                <li>Conducted a Share Rate deep dive that identified the root cause of an anomalous spike and flagged a structural decline trend, directly shaping roadmap prioritisation.</li>
+                <li>Designed and delivered the Share Attribution methodology that had blocked engineering for nearly a year — analysed the end-to-end data, defined the optimal attribution model linking organizer share actions to supporter visits, and enabled accurate downstream experimentation across millions of fundraisers.</li>
+                <li>Own funnel health for GoFundMe&apos;s consumer experience — continuously monitoring metrics across the Organizer, Amplify, and Fundraiser Page funnels and proactively surfacing anomalies and opportunities to product and engineering leadership.</li>
+                <li>Lead experiment analytics for the consumer product team; design launch dashboards that give PMs and engineers real-time signal on whether changes move the right metrics.</li>
+                <li>Pioneered AI-assisted analytics workflows across the team — authored internal adoption guides for LLM and MCP tooling, bringing the full analytics team into daily AI-augmented practice.</li>
+                <li>Drove a Share Rate deep dive that identified the root cause of an anomalous spike and surfaced a structural decline trend, directly influencing roadmap prioritisation.</li>
               </ul>
             </div>
 
@@ -329,13 +333,11 @@ export default function ResumePage() {
                 <span className="r-location">San Francisco, CA (Remote)</span>
               </div>
               <ul className="r-bullets">
-                <li>Spearheaded end-to-end customer segmentation strategy, increasing conversion rates by 11% across targeted campaigns.</li>
-                <li>Reduced lifetime value degradation of discount customers by 20% through data-driven retention strategies.</li>
-                <li>Designed and executed a Facebook Lift test for the Lapsed customer group, driving a 27% revenue increase through optimised audience targeting.</li>
-                <li>Managed a Gift with Purchase strategy, boosting Retail Net sales by 7%.</li>
-                <li>Optimised Retail Marketing strategy through geolocation analysis of new customer performance around retail stores.</li>
-                <li>Implemented an Airflow pipeline integrating Google Sheets and AWS S3 into Redshift, with a Looker reporting layer used across the business.</li>
-                <li>Automated NPS open-text feedback categorization using Python and the OpenAI API, eliminating manual tagging and accelerating product feedback loops.</li>
+                <li>Designed and executed a Facebook Lift test for the Lapsed segment, driving a 27% revenue lift through optimised audience targeting and measurement.</li>
+                <li>Built end-to-end customer segmentation strategy that lifted conversion rates 11% across targeted campaigns.</li>
+                <li>Cut lifetime value degradation among discount customers by 20% through cohort analysis and targeted intervention programs.</li>
+                <li>Automated NPS open-text categorisation using Python and the OpenAI API, eliminating manual tagging and accelerating the product feedback loop from weeks to hours.</li>
+                <li>Architected an Airflow pipeline integrating Google Sheets and AWS S3 into Redshift with a Looker reporting layer adopted across the business.</li>
               </ul>
             </div>
 
@@ -349,9 +351,9 @@ export default function ResumePage() {
                 <span className="r-location">San Francisco, CA</span>
               </div>
               <ul className="r-bullets">
-                <li>Increased landing page conversion rates by 18% through targeted optimisation and experimentation.</li>
-                <li>Developed Tableau dashboards that became the standard for channel performance tracking.</li>
-                <li>Enhanced forecasting accuracy through time series modelling across marketing channels.</li>
+                <li>Drove an 18% lift in landing page conversion rates through structured A/B experimentation and iterative optimisation.</li>
+                <li>Built Tableau dashboards adopted as the company standard for cross-channel performance tracking.</li>
+                <li>Improved marketing forecast accuracy through time series modelling across paid and organic channels.</li>
               </ul>
             </div>
 
@@ -365,9 +367,9 @@ export default function ResumePage() {
                 <span className="r-location">San Francisco, CA</span>
               </div>
               <ul className="r-bullets">
-                <li>Improved client retention from 73% to 88% through cohort analysis and targeted intervention strategies.</li>
-                <li>Managed CPA-based campaigns representing two-thirds of company revenue.</li>
-                <li>Delivered performance dashboards in Tableau that optimised campaign spend allocation.</li>
+                <li>Raised client retention from 73% to 88% (+15pp) through cohort analysis and targeted intervention strategies.</li>
+                <li>Owned CPA-based campaigns representing two-thirds of company revenue.</li>
+                <li>Built Tableau performance dashboards that drove smarter campaign spend allocation across accounts.</li>
               </ul>
             </div>
           </section>
@@ -377,16 +379,20 @@ export default function ResumePage() {
             <h2 className="r-section-title">Skills</h2>
             <div className="r-skills-grid">
               <div className="r-skill-row">
-                <span className="r-skill-label">Analytics</span>
-                <span>A/B Testing · Attribution Modelling · Funnel Analysis · Customer Segmentation · Cohort Analysis · Experiment Design · Product Analytics · Time Series Analysis</span>
+                <span className="r-skill-label">Analytics Methods</span>
+                <span>A/B Testing · Experiment Design · Attribution Modelling · Funnel Analysis · Cohort Analysis · Customer Segmentation · Statistical Analysis · Time Series Forecasting</span>
               </div>
               <div className="r-skill-row">
                 <span className="r-skill-label">Languages & Tools</span>
-                <span>SQL · Python · Airflow · dbt · Git · Claude Code</span>
+                <span>SQL · Python · Airflow · dbt · Git · LLM / AI Tooling</span>
               </div>
               <div className="r-skill-row">
-                <span className="r-skill-label">Platforms</span>
-                <span>Looker · Hex · Amplitude · Optimizely · AWS Redshift · mParticle · Tableau · Google Analytics</span>
+                <span className="r-skill-label">BI & Data Platforms</span>
+                <span>Looker · Hex · Amplitude · Tableau · Google Analytics · AWS Redshift · mParticle</span>
+              </div>
+              <div className="r-skill-row">
+                <span className="r-skill-label">Product & Testing</span>
+                <span>Optimizely · Product Analytics · Launch Measurement · Roadmap Influence · Stakeholder Communication</span>
               </div>
             </div>
           </section>
