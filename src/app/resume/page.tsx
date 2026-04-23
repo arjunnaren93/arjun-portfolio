@@ -4,105 +4,100 @@ export default function ResumePage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
-
-        .resume-wrap {
-          background: #efefef;
+        .resume-page {
+          background: #0a0a0a;
           min-height: 100vh;
-          padding: 2rem 1rem 4rem;
-          font-family: 'Georgia', 'Times New Roman', serif;
+          padding: 80px 1rem 4rem;
         }
 
-        .resume-toolbar {
+        .resume-actions {
           max-width: 820px;
-          margin: 0 auto 1.25rem;
+          margin: 0 auto 1rem;
           display: flex;
           justify-content: flex-end;
-          gap: 0.75rem;
         }
 
         .resume-btn {
           font-family: 'Courier New', monospace;
-          font-size: 0.7rem;
-          letter-spacing: 0.12em;
+          font-size: 0.65rem;
+          letter-spacing: 0.15em;
           text-transform: uppercase;
-          background: #1a1a1a;
-          color: #fff;
-          border: none;
-          padding: 0.55rem 1.1rem;
+          background: transparent;
+          color: #666;
+          border: 1px solid #333;
+          padding: 0.5rem 1rem;
           cursor: pointer;
-          transition: background 0.2s;
+          transition: color 0.2s, border-color 0.2s;
         }
-        .resume-btn:hover { background: #333; }
+        .resume-btn:hover { color: #d4a853; border-color: #d4a853; }
 
         .resume-doc {
           background: #fff;
           max-width: 820px;
           margin: 0 auto;
-          padding: 56px 64px;
-          box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+          padding: 52px 60px;
           color: #1a1a1a;
         }
 
         /* ── Header ── */
         .r-name {
-          font-family: 'Playfair Display', 'Georgia', serif;
-          font-size: 2.6rem;
-          font-weight: 400;
-          letter-spacing: -0.01em;
-          line-height: 1.1;
-          margin: 0 0 0.2rem;
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: 2.4rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          line-height: 1;
+          margin: 0 0 0.3rem;
           color: #0f0f0f;
         }
         .r-title {
           font-family: 'Courier New', monospace;
-          font-size: 0.72rem;
+          font-size: 0.7rem;
           letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: #555;
-          margin: 0 0 1rem;
+          color: #666;
+          margin: 0 0 0.85rem;
         }
         .r-contact {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.3rem 1.25rem;
-          font-family: 'Courier New', monospace;
-          font-size: 0.68rem;
-          letter-spacing: 0.05em;
-          color: #555;
-          padding-bottom: 1.25rem;
-          border-bottom: 2px solid #0f0f0f;
-          margin-bottom: 1.75rem;
-        }
-        .r-contact a { color: #555; text-decoration: none; }
-        .r-contact a:hover { color: #0f0f0f; }
-
-        /* ── Section ── */
-        .r-section {
-          margin-bottom: 1.75rem;
-        }
-        .r-section-title {
+          gap: 0.2rem 1rem;
           font-family: 'Courier New', monospace;
           font-size: 0.65rem;
+          letter-spacing: 0.04em;
+          color: #666;
+          padding-bottom: 1.1rem;
+          border-bottom: 2px solid #0f0f0f;
+          margin-bottom: 1.5rem;
+        }
+        .r-contact a { color: #555; text-decoration: none; }
+        .r-contact a:hover { color: #0f0f0f; text-decoration: underline; }
+
+        /* ── Section ── */
+        .r-section { margin-bottom: 1.5rem; }
+
+        .r-section-title {
+          font-family: 'Courier New', monospace;
+          font-size: 0.6rem;
           font-weight: 700;
-          letter-spacing: 0.2em;
+          letter-spacing: 0.22em;
           text-transform: uppercase;
           color: #0f0f0f;
-          border-bottom: 1px solid #ddd;
-          padding-bottom: 0.4rem;
-          margin-bottom: 1rem;
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 0.35rem;
+          margin-bottom: 0.9rem;
         }
 
         /* ── Summary ── */
         .r-summary {
           font-family: Georgia, serif;
-          font-size: 0.92rem;
+          font-size: 0.875rem;
           line-height: 1.75;
           color: #333;
         }
 
         /* ── Job ── */
-        .r-job { margin-bottom: 1.4rem; }
+        .r-job { margin-bottom: 1.25rem; }
         .r-job:last-child { margin-bottom: 0; }
 
         .r-job-header {
@@ -110,20 +105,20 @@ export default function ResumePage() {
           justify-content: space-between;
           align-items: baseline;
           flex-wrap: wrap;
-          gap: 0.25rem;
-          margin-bottom: 0.15rem;
+          gap: 0.2rem;
+          margin-bottom: 0.1rem;
         }
         .r-company {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: 1.05rem;
-          font-weight: 600;
+          font-family: Georgia, serif;
+          font-size: 0.95rem;
+          font-weight: 700;
           color: #0f0f0f;
         }
         .r-period {
           font-family: 'Courier New', monospace;
-          font-size: 0.65rem;
-          letter-spacing: 0.08em;
-          color: #777;
+          font-size: 0.62rem;
+          letter-spacing: 0.06em;
+          color: #888;
           white-space: nowrap;
         }
         .r-role-line {
@@ -131,21 +126,21 @@ export default function ResumePage() {
           justify-content: space-between;
           align-items: baseline;
           flex-wrap: wrap;
-          gap: 0.25rem;
-          margin-bottom: 0.6rem;
+          gap: 0.2rem;
+          margin-bottom: 0.5rem;
         }
         .r-role {
           font-family: 'Courier New', monospace;
-          font-size: 0.68rem;
+          font-size: 0.65rem;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: #555;
         }
         .r-location {
           font-family: 'Courier New', monospace;
-          font-size: 0.64rem;
-          letter-spacing: 0.06em;
-          color: #999;
+          font-size: 0.62rem;
+          letter-spacing: 0.04em;
+          color: #aaa;
         }
         .r-bullets {
           list-style: none;
@@ -153,12 +148,12 @@ export default function ResumePage() {
           margin: 0;
           display: flex;
           flex-direction: column;
-          gap: 0.35rem;
+          gap: 0.3rem;
         }
         .r-bullets li {
           font-family: Georgia, serif;
-          font-size: 0.88rem;
-          line-height: 1.65;
+          font-size: 0.86rem;
+          line-height: 1.6;
           color: #333;
           padding-left: 1rem;
           position: relative;
@@ -174,80 +169,79 @@ export default function ResumePage() {
         .r-skills-grid {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: 0.45rem;
         }
         .r-skill-row {
           display: flex;
-          gap: 0.5rem;
+          gap: 0.75rem;
           font-family: Georgia, serif;
-          font-size: 0.88rem;
+          font-size: 0.86rem;
           line-height: 1.55;
           color: #333;
         }
         .r-skill-label {
           font-family: 'Courier New', monospace;
-          font-size: 0.64rem;
+          font-size: 0.6rem;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: #777;
-          min-width: 140px;
+          color: #888;
+          min-width: 130px;
           padding-top: 0.15rem;
           flex-shrink: 0;
         }
 
         /* ── Education ── */
-        .r-edu-row {
+        .r-edu-item { margin-bottom: 0.75rem; }
+        .r-edu-item:last-child { margin-bottom: 0; }
+        .r-edu-header {
           display: flex;
           justify-content: space-between;
           align-items: baseline;
           flex-wrap: wrap;
-          gap: 0.25rem;
+          gap: 0.2rem;
         }
         .r-edu-school {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-size: 1rem;
-          font-weight: 600;
+          font-family: Georgia, serif;
+          font-size: 0.92rem;
+          font-weight: 700;
           color: #0f0f0f;
         }
         .r-edu-degree {
-          font-family: Georgia, serif;
-          font-size: 0.88rem;
-          color: #444;
-          margin-top: 0.15rem;
+          font-family: 'Courier New', monospace;
+          font-size: 0.63rem;
+          letter-spacing: 0.06em;
+          color: #666;
+          margin-top: 0.1rem;
         }
 
         /* ── Print ── */
         @media print {
-          @page { margin: 0.6in 0.65in; size: letter; }
-          .resume-wrap { background: white !important; padding: 0 !important; }
-          .resume-toolbar { display: none !important; }
-          .resume-doc {
-            box-shadow: none !important;
-            padding: 0 !important;
-            max-width: 100% !important;
-          }
+          @page { margin: 0.55in 0.6in; size: letter; }
+          .resume-page { background: white !important; padding: 0 !important; }
+          .resume-actions { display: none !important; }
+          .resume-doc { box-shadow: none !important; padding: 0 !important; max-width: 100% !important; }
           .r-bullets li, .r-summary, .r-skill-row { color: #1a1a1a !important; }
-          a { color: #333 !important; }
+          .r-section-title { color: #0f0f0f !important; }
+          a { color: #333 !important; text-decoration: none !important; }
         }
 
         @media (max-width: 600px) {
+          .resume-page { padding: 72px 0.5rem 3rem; }
           .resume-doc { padding: 32px 24px; }
-          .r-name { font-size: 2rem; }
-          .r-job-header, .r-role-line { flex-direction: column; gap: 0; }
-          .r-skill-label { min-width: 110px; }
+          .r-name { font-size: 1.8rem; }
+          .r-skill-label { min-width: 100px; }
         }
       `}</style>
 
-      <div className="resume-wrap">
+      <div className="resume-page">
 
-        {/* Toolbar */}
-        <div className="resume-toolbar no-print">
+        {/* Download button */}
+        <div className="resume-actions no-print">
           <button className="resume-btn" onClick={() => window.print()}>
             ↓ Save as PDF
           </button>
         </div>
 
-        {/* Document */}
         <div className="resume-doc">
 
           {/* ── Header ── */}
@@ -255,6 +249,7 @@ export default function ResumePage() {
           <p className="r-title">Staff Analyst, Consumer Analytics</p>
           <div className="r-contact">
             <span>Seattle, WA</span>
+            <span>469-734-5729</span>
             <a href="mailto:arjun.naren93@gmail.com">arjun.naren93@gmail.com</a>
             <a href="https://linkedin.com/in/arjun-narendran" target="_blank" rel="noreferrer">
               linkedin.com/in/arjun-narendran
@@ -269,12 +264,12 @@ export default function ResumePage() {
             <h2 className="r-section-title">Summary</h2>
             <p className="r-summary">
               Data analytics leader with 8+ years of experience translating complex data into
-              decisions that move the business. Currently at GoFundMe, owning consumer funnel
-              health across millions of fundraisers and designing attribution methodology that
-              had blocked engineering for nearly a year. Track record of measurable impact —
-              27% revenue lifts, 18% conversion improvements, client retention from 73% to 88%.
-              Expert in SQL, Python, A/B testing, and building AI-augmented analytics workflows
-              that scale across teams.
+              decisions that move the business — across consumer product, ecommerce, and marketing.
+              Currently at GoFundMe, owning funnel health for millions of fundraisers and designing
+              attribution methodology that had blocked engineering for nearly a year. Track record of
+              measurable impact: 27% revenue lift, 18% conversion improvement, client retention from
+              73% to 88%. Expert in SQL, Python, A/B testing, and building AI-augmented analytics
+              workflows that scale across teams.
             </p>
           </section>
 
@@ -292,30 +287,11 @@ export default function ResumePage() {
                 <span className="r-location">Seattle, WA</span>
               </div>
               <ul className="r-bullets">
-                <li>
-                  Own the data for GoFundMe&apos;s consumer experience — continuously monitoring
-                  health metrics across the Organizer, Amplify, and Fundraiser Page funnels and
-                  proactively surfacing drops, anomalies, and opportunities to product and engineering.
-                </li>
-                <li>
-                  Designed and delivered the Share Attribution methodology that engineering had been
-                  unable to solve for nearly a year — analysed the data end-to-end and defined the
-                  optimal model to attribute organizer share actions to supporter visits, enabling
-                  accurate downstream measurement.
-                </li>
-                <li>
-                  Primary analytics partner for experiment readouts; build launch dashboards giving
-                  PMs and engineers real-time signal on whether product changes move the right metrics.
-                </li>
-                <li>
-                  Championed AI-assisted analytics across the team — authored internal guides for
-                  Claude Code and MCP tooling, driving adoption so the full analytics team now uses
-                  AI in their day-to-day workflows.
-                </li>
-                <li>
-                  Conducted a Share Rate deep dive that identified the root cause of an anomalous
-                  spike and flagged a structural decline trend, directly shaping roadmap prioritisation.
-                </li>
+                <li>Own the data for GoFundMe&apos;s consumer experience — continuously monitoring health metrics across the Organizer, Amplify, and Fundraiser Page funnels and proactively surfacing drops, anomalies, and opportunities to product and engineering.</li>
+                <li>Designed and delivered the Share Attribution methodology that engineering had been unable to solve for nearly a year — analysed the data end-to-end and defined the optimal model attributing organizer share actions to supporter visits, enabling accurate downstream measurement.</li>
+                <li>Primary analytics partner for experiment readouts; build launch dashboards giving PMs and engineers real-time signal on whether product changes move the right metrics.</li>
+                <li>Championed AI-assisted analytics across the team — authored internal guides for Claude Code and MCP tooling, driving adoption so the full analytics team uses AI in day-to-day workflows.</li>
+                <li>Conducted a Share Rate deep dive that identified the root cause of an anomalous spike and flagged a structural decline trend, directly shaping roadmap prioritisation.</li>
               </ul>
             </div>
 
@@ -329,26 +305,13 @@ export default function ResumePage() {
                 <span className="r-location">San Francisco, CA (Remote)</span>
               </div>
               <ul className="r-bullets">
-                <li>
-                  Spearheaded end-to-end customer segmentation strategy, increasing conversion
-                  rates by 11% across targeted campaigns.
-                </li>
-                <li>
-                  Reduced lifetime value degradation of discount customers by 20% through
-                  data-driven retention and re-engagement strategies.
-                </li>
-                <li>
-                  Designed and executed a Facebook Lift test for the Lapsed customer group,
-                  driving a 27% revenue increase through optimised audience targeting.
-                </li>
-                <li>
-                  Implemented an Airflow pipeline integrating Google Sheets and AWS S3 into
-                  Redshift, with a Looker reporting layer used across the business.
-                </li>
-                <li>
-                  Automated NPS open-text feedback categorization using Python and the OpenAI
-                  API, eliminating manual tagging and accelerating product feedback loops.
-                </li>
+                <li>Spearheaded end-to-end customer segmentation strategy, increasing conversion rates by 11% across targeted campaigns.</li>
+                <li>Reduced lifetime value degradation of discount customers by 20% through data-driven retention strategies.</li>
+                <li>Designed and executed a Facebook Lift test for the Lapsed customer group, driving a 27% revenue increase through optimised audience targeting.</li>
+                <li>Managed a Gift with Purchase strategy, boosting Retail Net sales by 7%.</li>
+                <li>Optimised Retail Marketing strategy through geolocation analysis of new customer performance around retail stores.</li>
+                <li>Implemented an Airflow pipeline integrating Google Sheets and AWS S3 into Redshift, with a Looker reporting layer used across the business.</li>
+                <li>Automated NPS open-text feedback categorization using Python and the OpenAI API, eliminating manual tagging and accelerating product feedback loops.</li>
               </ul>
             </div>
 
@@ -407,11 +370,20 @@ export default function ResumePage() {
           {/* ── Education ── */}
           <section className="r-section">
             <h2 className="r-section-title">Education</h2>
-            <div className="r-edu-row">
-              <span className="r-edu-school">[ Add your university ]</span>
-              <span className="r-period">[ Graduation year ]</span>
+            <div className="r-edu-item">
+              <div className="r-edu-header">
+                <span className="r-edu-school">University of Texas at Dallas</span>
+                <span className="r-period">Aug 2015 – Aug 2017</span>
+              </div>
+              <p className="r-edu-degree">MS · Information Technology and Management · Dallas, TX</p>
             </div>
-            <p className="r-edu-degree">[ Degree · Major ]</p>
+            <div className="r-edu-item">
+              <div className="r-edu-header">
+                <span className="r-edu-school">Anna University</span>
+                <span className="r-period">Jul 2011 – Jul 2015</span>
+              </div>
+              <p className="r-edu-degree">BE · Computer Science and Engineering · Chennai, India</p>
+            </div>
           </section>
 
         </div>
