@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     description: "Eight years of analytics. I make the data mean something.",
     type: "website",
   },
+  verification: {
+    google: "krU1gi_V_a-8ELrBBjgeRF0dOtRlcnBxEwaDU0LtrF8",
+  },
 };
 
 export default function RootLayout({
