@@ -1,5 +1,40 @@
 "use client";
 
+function printResume() {
+  const doc = document.querySelector(".resume-doc");
+  if (!doc) return;
+
+  const styles = Array.from(document.querySelectorAll("style"))
+    .map((s) => s.innerHTML)
+    .join("\n");
+
+  const win = window.open("", "_blank", "width=900,height=1200");
+  if (!win) return;
+
+  win.document.write(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Arjun Narendran — Resume</title>
+        <style>
+          @page { margin: 0.55in 0.6in; size: letter; }
+          body { margin: 0; padding: 0; background: white; }
+          ${styles}
+          .resume-doc { box-shadow: none !important; max-width: 100% !important; }
+          a { color: #333 !important; text-decoration: none !important; }
+        </style>
+      </head>
+      <body>${doc.outerHTML}</body>
+    </html>
+  `);
+  win.document.close();
+  win.focus();
+  setTimeout(() => {
+    win.print();
+    win.close();
+  }, 300);
+}
+
 export default function ResumePage() {
   return (
     <>
@@ -214,17 +249,6 @@ export default function ResumePage() {
           margin-top: 0.1rem;
         }
 
-        /* ── Print ── */
-        @media print {
-          @page { margin: 0.55in 0.6in; size: letter; }
-          .resume-page { background: white !important; padding: 0 !important; }
-          .resume-actions { display: none !important; }
-          .resume-doc { box-shadow: none !important; padding: 0 !important; max-width: 100% !important; }
-          .r-bullets li, .r-summary, .r-skill-row { color: #1a1a1a !important; }
-          .r-section-title { color: #0f0f0f !important; }
-          a { color: #333 !important; text-decoration: none !important; }
-        }
-
         @media (max-width: 600px) {
           .resume-page { padding: 72px 0.5rem 3rem; }
           .resume-doc { padding: 32px 24px; }
@@ -237,7 +261,7 @@ export default function ResumePage() {
 
         {/* Download button */}
         <div className="resume-actions no-print">
-          <button className="resume-btn" onClick={() => window.print()}>
+          <button className="resume-btn" onClick={printResume}>
             ↓ Save as PDF
           </button>
         </div>
