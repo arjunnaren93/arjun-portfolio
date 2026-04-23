@@ -20,6 +20,28 @@ export default function BlogIndex() {
     <main style={{ minHeight: "100vh", paddingTop: "6rem", paddingBottom: "6rem" }}>
       <div style={{ maxWidth: "56rem", margin: "0 auto", padding: "0 1.5rem" }}>
 
+        {/* Back link */}
+        <Link
+          href="/"
+          style={{
+            fontFamily: "var(--font-geist-mono)",
+            fontSize: "0.7rem",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            color: "var(--gray-500)",
+            textDecoration: "none",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.4rem",
+            marginBottom: "3rem",
+            transition: "color 0.2s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "var(--gray-500)")}
+        >
+          ← Back to portfolio
+        </Link>
+
         {/* Header */}
         <div style={{ marginBottom: "4rem" }}>
           <p
