@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Projects", href: "/#projects" },
   { label: "Blog", href: "/blog" },
   { label: "Resume", href: "/resume" },
+  { label: "Hikes", href: "https://hikes.arjunnarendran.com", external: true },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -77,6 +78,8 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
               style={{
                 fontFamily: "var(--font-geist-mono)",
                 fontSize: "0.7rem",
@@ -148,6 +151,8 @@ export default function Nav() {
               <motion.a
                 key={link.href}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noreferrer" : undefined}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + i * 0.07 }}
