@@ -14,6 +14,7 @@ export interface Project {
   tags: string[];
   link?: string;
   image?: string;
+  slug?: string;
 }
 
 export interface Skill {

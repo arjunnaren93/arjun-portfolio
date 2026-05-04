@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { projects } from "@/lib/data";
 
 export default function ProjectsSection() {
@@ -52,7 +53,7 @@ export default function ProjectsSection() {
                 gap: "2rem",
                 padding: "2.5rem 0",
                 borderBottom: "1px solid var(--gray-800)",
-                cursor: "default",
+                cursor: project.slug ? "pointer" : "default",
               }}
               whileHover={{ x: 4 }}
             >
@@ -106,22 +107,43 @@ export default function ProjectsSection() {
                   {project.description}
                 </p>
 
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-                  {project.tags.map((tag, j) => (
-                    <span
-                      key={j}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.75rem" }}>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+                    {project.tags.map((tag, j) => (
+                      <span
+                        key={j}
+                        style={{
+                          fontFamily: "var(--font-geist-mono)",
+                          fontSize: "0.62rem",
+                          letterSpacing: "0.08em",
+                          color: "var(--gray-600)",
+                          border: "1px solid var(--gray-800)",
+                          padding: "0.2rem 0.55rem",
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  {project.slug && (
+                    <Link
+                      href={`/projects/${project.slug}`}
                       style={{
                         fontFamily: "var(--font-geist-mono)",
-                        fontSize: "0.62rem",
-                        letterSpacing: "0.08em",
-                        color: "var(--gray-600)",
-                        border: "1px solid var(--gray-800)",
-                        padding: "0.2rem 0.55rem",
+                        fontSize: "0.65rem",
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        color: "var(--accent)",
+                        textDecoration: "none",
+                        whiteSpace: "nowrap",
+                        transition: "opacity 0.2s",
                       }}
+                      onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+                      onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      View case study →
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>

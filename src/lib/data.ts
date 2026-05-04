@@ -12,6 +12,7 @@ export const jobs: Job[] = [
       "Designed and delivered the Share Attribution methodology that engineering had been unable to solve for nearly a year — analysed the data end-to-end and defined an optimal model to attribute an organizer's share action to a supporter's subsequent visit, enabling accurate downstream measurement.",
       "Build performance dashboards to track new product feature launches, giving PMs and engineers a real-time read on whether changes are moving the right metrics; primary analytics partner for experiment readouts run by data scientists.",
       "Championed AI-assisted analytics across the team — authored internal guides for Claude Code and MCP tooling, and drove adoption so the full analytics team now uses AI in their day-to-day workflows.",
+      "Built an automated experiment analysis agent with Claude Code that generates SQL, runs statistical tests (Bonferroni, SRM, Welch's t-test), and produces an interactive dashboard — cutting experiment readout time from 1–2 days to under 15 minutes.",
       "Conducted a Share Rate deep dive that identified the root cause of an anomalous spike and flagged a structural decline trend — findings directly shaped roadmap prioritisation.",
     ],
   },
@@ -55,27 +56,35 @@ export const jobs: Job[] = [
 export const projects: Project[] = [
   {
     number: "01",
+    title: "Automated Experiment Analysis Agent",
+    description:
+      "Built a Claude Code agent that turns an experiment design document into a complete results package — SQL queries, statistical analysis, interactive dashboard, and daily Slack monitoring — in under 15 minutes. What used to take a data scientist 1–2 days now runs autonomously.",
+    tags: ["Claude Code", "Python", "SQL", "Snowflake", "A/B Testing", "Statistics", "Plotly", "Slack"],
+    slug: "experiment-analysis-agent",
+  },
+  {
+    number: "02",
     title: "Customer Segmentation Engine",
     description:
       "Built a full segmentation strategy at Rothy's that identified high-value customer cohorts and drove an 11% lift in conversion rates across targeted campaigns.",
     tags: ["Python", "SQL", "Redshift", "Looker"],
   },
   {
-    number: "02",
+    number: "03",
     title: "Facebook Lift Test Framework",
     description:
       "Designed and executed a Lift test on Facebook campaigns for the Lapsed customer group, resulting in a 27% revenue increase through optimized audience targeting.",
     tags: ["A/B Testing", "Facebook Ads", "Python", "Statistics"],
   },
   {
-    number: "03",
+    number: "04",
     title: "NPS Feedback Categorization",
     description:
       "Automated open-text NPS feedback classification using Python and the OpenAI API, eliminating manual tagging and unlocking faster product feedback loops.",
     tags: ["Python", "OpenAI API", "NLP", "Automation"],
   },
   {
-    number: "04",
+    number: "05",
     title: "Airflow Data Pipeline",
     description:
       "Implemented a robust Airflow pipeline integrating Google Sheets and AWS S3 into Redshift, with a Looker layer for stakeholder reporting.",
