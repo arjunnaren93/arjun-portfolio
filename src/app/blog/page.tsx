@@ -2,7 +2,30 @@
 
 import Link from "next/link";
 
-const posts = [
+type Post = {
+  slug: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  excerpt: string;
+  // A static page in public/ (exported from its own app) rather than a route here.
+  staticPage?: boolean;
+};
+
+const posts: Post[] = [
+  {
+    slug: "whos-on-my-bill",
+    title: "Who's On My Bill? Where $54 Billion in Higher Electricity Costs Went",
+    subtitle: "An interactive data story",
+    date: "November 14, 2026",
+    readTime: "10 min read",
+    tags: ["Data Story", "Energy", "Python", "Data Viz"],
+    excerpt:
+      "The same electricity now costs US homes $54 billion more a year than in 2021. I traced it through every state, the data center boom and a grid auction most people have never heard of, then built a lookup for your own ZIP code.",
+    staticPage: true,
+  },
   {
     slug: "airflow-dag-google-sheets",
     title: "Creating a DAG to Schedule a Report to Google Sheets via Airflow",
@@ -14,6 +37,15 @@ const posts = [
       "A walkthrough of building an Airflow DAG that automates report generation by querying Amazon Redshift and uploading results directly to Google Sheets — using Astronomer and Docker locally.",
   },
 ];
+
+function PostLink({ post, children }: { post: Post; children: React.ReactNode }) {
+  const style = { textDecoration: "none" };
+  // Static pages need a full page load; client-side routing only knows app routes.
+  if (post.staticPage) {
+    return <a href={`/blog/${post.slug}`} style={style}>{children}</a>;
+  }
+  return <Link href={`/blog/${post.slug}`} style={style}>{children}</Link>;
+}
 
 export default function BlogIndex() {
   return (
@@ -83,11 +115,7 @@ export default function BlogIndex() {
         {/* Post list */}
         <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
           {posts.map((post, i) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              style={{ textDecoration: "none" }}
-            >
+            <PostLink key={post.slug} post={post}>
               <article
                 style={{
                   padding: "2.5rem 0",
@@ -181,7 +209,7 @@ export default function BlogIndex() {
                   </span>
                 </div>
               </article>
-            </Link>
+            </PostLink>
           ))}
         </div>
       </div>
